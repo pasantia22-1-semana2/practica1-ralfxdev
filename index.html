@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP Presupuesto</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!--header-->
+    <header class="header">
+        <div class="header__container">
+            <p class="header__text header__text--set">Presupuesto Disponible</p>
+            <h1 class="header__title">$5,000.00</h1>
+            <div class="header__label header__label__bg--green">
+                <p class="header__text header__text--start">Ingresos</p>
+                <p class="header__text header__text--end">$2,600.00</p>
+            </div>
+            <div  class="header__label header__label__bg--blue">
+                <p class="header__text header__text--start">Egresos</p>
+                <p class="header__text header__text--end">$1,300.00 <span class="header__text--span">50%</span></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container__content">
+
+        <div class="container__content__desciption">
+            <div class="content__desciption">
+                <select class="content__description__item item--input">
+                    <option>+</option>
+                    <option>-</option>
+                </select>
+                <input class="content__description__item item--input" type="text" placeholder="Agregar Descripción">
+                <input class="content__description__item item--input"  type="number" placeholder="Valor">
+                <button class="content__description__item item--button" >✔️</button>
+            </div>
+        </div>
+    
+        <div class="container__tables">
+    
+            <div class="table__content">
+                <h3 class="table__content__title table__content__title--green">Ingresos</h3>
+                <table class="table__content__table">
+                    <tbody class="table__tbody">
+                        <tr>
+                            <td>Salario</td>
+                            <td>+$1500.00</td>
+                            <td><button class="table__item--button" >❌</button></td>
+                        </tr>
+                        <tr>
+                            <td>Viaje</td>
+                            <td>+$500.00</td>
+                            <td><button class="table__item--button" >❌</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="table__content">
+                <h3 class="table__content__title table__content__title--blue">Egresos</h3>
+                <table class="table__content__table">
+                    <tbody>
+                        <tr>
+                            <td>Venta</td>
+                            <td>-$100.00 <span class="header__text--span">50%</span></td>
+                            <td><button class="table__item--button" >❌</button></td>
+                        </tr>
+                        <tr>
+                            <td>Viaje</td>
+                            <td>-$300.00 <span class="header__text--span">50%</span></td>
+                            <td><button class="table__item--button" >❌</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>© 2022 RALFxDev</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
