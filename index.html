@@ -14,14 +14,14 @@
     <header class="header">
         <div class="header__container">
             <p class="header__text header__text--set">Presupuesto Disponible</p>
-            <h1 class="header__title">$5,000.00</h1>
+            <h1 class="header__title" id="totalDisponible">$5,000.00</h1>
             <div class="header__label header__label__bg--green">
                 <p class="header__text header__text--start">Ingresos</p>
-                <p class="header__text header__text--end">$2,600.00</p>
+                <p class="header__text header__text--end" id="totalIngresos">$2,600.00</p>
             </div>
             <div  class="header__label header__label__bg--blue">
                 <p class="header__text header__text--start">Egresos</p>
-                <p class="header__text header__text--end">$1,300.00 <span class="header__text--span">50%</span></p>
+                <p class="header__text header__text--end" id = "totalEgresos">$1,300.00 <span class="header__text--span" id = "porEgresos">50%</span></p>
             </div>
         </div>
     </header>
@@ -29,15 +29,15 @@
     <main class="container__content">
 
         <div class="container__content__desciption">
-            <div class="content__desciption">
-                <select class="content__description__item item--input">
-                    <option>+</option>
-                    <option>-</option>
+            <form class="content__desciption" id="form">
+                <select class="content__description__item item--input" id="options">
+                    <option value="-">+</option>
+                    <option value="+">-</option>
                 </select>
-                <input class="content__description__item item--input" type="text" placeholder="Agregar Descripción">
-                <input class="content__description__item item--input"  type="number" placeholder="Valor">
-                <button class="content__description__item item--button" >✔️</button>
-            </div>
+                <input class="content__description__item item--input" type="text"  id="content" name="content" placeholder="Agregar Descripción">
+                <input class="content__description__item item--input"  type="number" id="number" name="number" min="0" placeholder="Valor">
+                <button class="content__description__item item--button" type="button" onclick="sendInfo()">✔️</button>
+            </form>
         </div>
     
         <div class="container__tables">
@@ -45,7 +45,7 @@
             <div class="table__content">
                 <h3 class="table__content__title table__content__title--green">Ingresos</h3>
                 <table class="table__content__table">
-                    <tbody class="table__tbody">
+                    <tbody class="table__tbody" id="tableIngresos">
                         <tr>
                             <td>Salario</td>
                             <td>+$1500.00</td>
@@ -63,7 +63,7 @@
             <div class="table__content">
                 <h3 class="table__content__title table__content__title--blue">Egresos</h3>
                 <table class="table__content__table">
-                    <tbody>
+                    <tbody class="table__tbody" id="tableEgresos">
                         <tr>
                             <td>Venta</td>
                             <td>-$100.00 <span class="header__text--span">50%</span></td>
@@ -88,5 +88,7 @@
         </div>
     </footer>
     
+    <script src="./js/app.js"></script>
+
 </body>
 </html>
